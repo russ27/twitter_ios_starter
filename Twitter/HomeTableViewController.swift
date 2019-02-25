@@ -79,6 +79,7 @@ class HomeTableViewController: UITableViewController {
             }
             
             self.tableView.reloadData() //don't forget to reload
+            self.myRefreshControl.endRefreshing() //to stop infinite spinning "load wheel"
             
         }, failure: { (Error) in
             print("Tweets not retrieved!")
